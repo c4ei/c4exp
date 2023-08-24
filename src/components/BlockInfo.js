@@ -8,7 +8,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { parsePayload } from "../bech32.js";
 import { numberWithCommas } from "../helper.js";
-import { getBlock, getTransactions } from '../kaspa-api-client.js';
+import { getBlock, getTransactions } from '../c4x-api-client.js';
 import BlueScoreContext from "./BlueScoreContext.js";
 import CopyButton from "./CopyButton.js";
 import PriceContext from "./PriceContext.js";
@@ -250,7 +250,7 @@ const BlockInfo = () => {
                                                                     </Link>
                                                                     <CopyButton text={getAddrFromOutputs(txInfo[txInput.previousOutpoint.transactionId]["outputs"], txInput.previousOutpoint.index || 0)} />
                                                                 </Col><Col className="block-utxo-amount-minus" xs={12} sm={4} md={2}>
-                                                                    -{numberWithCommas(getAmountFromOutputs(txInfo[txInput.previousOutpoint.transactionId]["outputs"], txInput.previousOutpoint.index || 0))}&nbsp;KAS
+                                                                    -{numberWithCommas(getAmountFromOutputs(txInfo[txInput.previousOutpoint.transactionId]["outputs"], txInput.previousOutpoint.index || 0))}&nbsp;C4X
                                                                 </Col></>
                                                                 :
                                                                 <><Col xs={12} sm={8} md={9} lg={9} xl={8} xxl={7} className="text-truncate">
@@ -276,14 +276,14 @@ const BlockInfo = () => {
                                                                 </Link>
 
                                                                 <CopyButton text={txOutput.verboseData.scriptPublicKeyAddress} />
-                                                            </Col><Col className="block-utxo-amount" xs={12} sm={4} md={3}>+{numberWithCommas(txOutput.amount / 100000000)}&nbsp;KAS</Col>
+                                                            </Col><Col className="block-utxo-amount" xs={12} sm={4} md={3}>+{numberWithCommas(txOutput.amount / 100000000)}&nbsp;C4X</Col>
                                                         </Row>)}
                                                     </Container>
                                                 </Col>
                                             </Col>
                                             <Col sm={5} md={4}>
                                                 <div className="utxo-header mt-3">tx amount</div>
-                                                <div className="utxo-value d-flex flex-row"><div className="utxo-amount">{(numberWithCommas(tx.outputs.reduce((a, b) => (a || 0) + parseInt(b.amount), 0) / 100000000))} KAS</div></div>
+                                                <div className="utxo-value d-flex flex-row"><div className="utxo-amount">{(numberWithCommas(tx.outputs.reduce((a, b) => (a || 0) + parseInt(b.amount), 0) / 100000000))} C4X</div></div>
                                             </Col>
                                             <Col sm={3} md={2}>
                                                 <div className="utxo-header mt-3">tx value</div>

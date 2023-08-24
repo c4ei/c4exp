@@ -21,7 +21,7 @@ import PriceContext from './components/PriceContext';
 import TransactionInfo from './components/TransactionInfo';
 import TxPage from './components/TxPage';
 import Dashboard from './Dashboard';
-import { getBlock } from './kaspa-api-client';
+import { getBlock } from './c4x-api-client';
 // import 'moment/min/locales';
 
 // var locale = window.navigator.userLanguage || window.navigator.language || "en";
@@ -176,7 +176,7 @@ function App() {
                     <Nav.Item><NavLink className="nav-link fs-5" onClick={closeMenuIfNeeded} to={"/blocks"}>Blocks</NavLink></Nav.Item>
                     <Nav.Item><NavLink className="nav-link fs-5" onClick={closeMenuIfNeeded} to={"/txs"}>Transactions</NavLink></Nav.Item>
                   </Nav>
-                  <div className='ms-auto navbar-price'>${price} <span className="text-light">/ KAS</span></div>
+                  <div className='ms-auto navbar-price'>${price} <span className="text-light">/ C4X</span></div>
                 </Navbar.Collapse>
               </Container>
             </Navbar>

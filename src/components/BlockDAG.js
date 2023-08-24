@@ -1,7 +1,7 @@
 import { faDiagramProject } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
-import { getBlockdagInfo } from '../kaspa-api-client';
+import { getBlockdagInfo } from '../c4x-api-client';
 
 
 const BlockDAGBox = () => {

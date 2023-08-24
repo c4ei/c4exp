@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { HiCurrencyDollar } from 'react-icons/hi';
 import { IoMdTrendingDown, IoMdTrendingUp } from 'react-icons/io';
 import { numberWithCommas } from "../helper";
-import { getCoinSupply } from '../kaspa-api-client';
+import { getCoinSupply } from '../c4x-api-client';
 import PriceContext from "./PriceContext";
 
 
@@ -38,7 +38,7 @@ const MarketDataBox = () => {
                 </tr>
                 <tr>
                     <td className="cardBoxElement">Price</td>
-                    <td>$ {price} / KAS</td>
+                    <td>$ {price} / C4X</td>
                 </tr>
                 <tr>
                     <td style={{ fontSize: "small" }} className="cardBoxElement" align="right">1h %</td>
