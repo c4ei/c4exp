@@ -1,4 +1,5 @@
 const API_BASE = "https://api.kaspa.org/"
+// const API_BASE = "http://localhost:21000"
 
 export async function getBlock(hash) {
     const res = await fetch(`${API_BASE}blocks/${hash}`, { headers: { 'Access-Control-Allow-Origin': '*' } })
